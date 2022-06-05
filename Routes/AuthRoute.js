@@ -1,8 +1,8 @@
 import express from "express";
+import { registerUser } from "../Controllers/AuthController";
 
 const router = express.Router();
 
-router.get('/', async(req,res)=>{
-  res.send("Authentification  ")
-})
+router.post('/register', registerUser)
+
 export default router;
