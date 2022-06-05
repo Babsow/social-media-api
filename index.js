@@ -2,7 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import AuthRoute from './Routes/AuthRoute.js';
-import UserRoute from './Routes/UserRoute.js'
+import UserRoute from './Routes/UserRoute.js';
+import PostRoute from './Routes/PostRoute.js';
 
 
 //Routes 
@@ -20,3 +21,4 @@ mongoose.connect("mongodb://localhost/socialMedia")
 // Routes usage
 app.use('/auth', AuthRoute);
 app.use('/user',UserRoute)
+app.use('/post', PostRoute)
